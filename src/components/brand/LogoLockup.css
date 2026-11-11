@@ -1,0 +1,50 @@
+.lockup {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  /* clear space ≈ window height of the mark */
+  padding: 6px 0;
+}
+
+.lockup__mark {
+  height: 36px;
+  width: auto;
+  aspect-ratio: 1330 / 930;
+  flex: none;
+}
+
+.lockup__text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  line-height: 1;
+}
+
+.lockup__word {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.55rem;
+  letter-spacing: 0.04em;
+  background-image: var(--gold-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+.lockup__sub {
+  margin-top: 2px;
+  font-family: var(--font-label);
+  font-weight: 500;
+  font-size: 0.52rem;
+  letter-spacing: 0.3em;
+  margin-right: -0.3em; /* cancel trailing tracking so it aligns right */
+}
+
+.lockup--light .lockup__sub {
+  color: var(--text-light);
+}
+
+.lockup--dark .lockup__sub {
+  color: var(--text-dark);
+}

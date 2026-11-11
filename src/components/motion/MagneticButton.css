@@ -1,0 +1,88 @@
+.mbtn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75em;
+  min-height: 54px;
+  padding: 0 30px;
+  overflow: hidden;
+  isolation: isolate;
+  border-radius: var(--radius);
+  font-family: var(--font-label);
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  transition: color 0.5s var(--ease-out), border-color 0.5s var(--ease-out);
+}
+
+.mbtn__label {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75em;
+}
+
+.mbtn__fill {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  transform: scaleX(0);
+  transform-origin: right center;
+  transition: transform 0.7s var(--ease-expo);
+}
+
+.mbtn:hover .mbtn__fill,
+.mbtn:focus-visible .mbtn__fill {
+  transform: scaleX(1);
+  transform-origin: left center;
+}
+
+/* Solid: gold gradient, ivory wipe */
+.mbtn--solid {
+  background: var(--gold-gradient);
+  color: var(--ink);
+}
+
+.mbtn--solid .mbtn__fill {
+  background: var(--ivory);
+}
+
+/* Outline: gold hairline, gold wipe, ink text on hover */
+.mbtn--outline {
+  border: 1px solid var(--gold-500);
+  color: var(--gold-300);
+}
+
+.mbtn--outline .mbtn__fill {
+  background: var(--gold-gradient);
+}
+
+.mbtn--outline:hover,
+.mbtn--outline:focus-visible {
+  color: var(--ink);
+}
+
+.theme-ivory .mbtn--outline,
+.theme-sand .mbtn--outline {
+  border-color: var(--gold-700);
+  color: var(--gold-900);
+}
+
+.theme-ivory .mbtn--outline:hover,
+.theme-sand .mbtn--outline:hover {
+  color: var(--ink);
+}
+
+.theme-ivory .mbtn--solid .mbtn__fill,
+.theme-sand .mbtn--solid .mbtn__fill {
+  background: var(--ink);
+}
+
+.theme-ivory .mbtn--solid:hover,
+.theme-sand .mbtn--solid:hover {
+  color: var(--ivory);
+}

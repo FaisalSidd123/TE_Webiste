@@ -1,0 +1,55 @@
+/* ==========================================================================
+   Taqwa Enterprises — design tokens
+   ========================================================================== */
+:root {
+  /* Colour */
+  --ink: #0e0d0b;
+  --ink-2: #1a1815;
+  --ink-3: #2a2622;
+  --ivory: #f7f3ea;
+  --sand: #ece4d3;
+  --stone: #8c857a;
+  --text-dark: #1f1c1a;
+  --text-light: #ede7da;
+
+  --gold-100: #f3e66c;
+  --gold-300: #ebce5a;
+  --gold-500: #d4a73a;
+  --gold-700: #b57e23;
+  --gold-900: #8a5a17;
+
+  --success: #5e7d5a;
+  --error: #a3473b;
+
+  --gold-gradient: linear-gradient(100deg, #f3e66c 0%, #ebce5a 30%, #d4a73a 60%, #b57e23 85%, #8a5a17 100%);
+  /* Darker variant so gradient text stays readable on ivory */
+  --gold-gradient-deep: linear-gradient(100deg, #c99a2e 0%, #b57e23 45%, #8a5a17 100%);
+
+  --line-dark: var(--ink-3);
+  --line-light: rgba(31, 28, 26, 0.12);
+
+  /* Type */
+  --font-display: 'Cormorant Garamond', 'Times New Roman', serif;
+  --font-label: 'Oswald', 'Arial Narrow', sans-serif;
+  --font-body: 'Manrope', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-urdu: 'Noto Nastaliq Urdu', serif;
+
+  --fs-hero: clamp(3.2rem, 8vw, 8.5rem);
+  --fs-h2: clamp(2.4rem, 5vw, 5rem);
+  --fs-h3: clamp(1.5rem, 2.4vw, 2.25rem);
+  --fs-body: clamp(1rem, 1.05vw, 1.125rem);
+  --fs-label: 0.78rem;
+  --tracking-label: 0.28em;
+
+  /* Layout */
+  --max-w: 1320px;
+  --gutter: clamp(20px, 5vw, 80px);
+  --section-py: clamp(96px, 14vh, 180px);
+  --nav-h: 84px;
+  --radius: 2px;
+
+  /* Motion (CSS mirrors of lib/motion.js) */
+  --ease-out: cubic-bezier(0.215, 0.61, 0.355, 1);
+  --ease-inout: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  --ease-expo: cubic-bezier(0.16, 1, 0.3, 1);
+}

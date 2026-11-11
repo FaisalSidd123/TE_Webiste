@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1330 930" fill="none">
+  <defs>
+    <linearGradient id="taqwaGold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F3E66C"/>
+      <stop offset="0.55" stop-color="#E8C65A"/>
+      <stop offset="1" stop-color="#D9A441"/>
+    </linearGradient>
+  </defs>
+  <g stroke="url(#taqwaGold)" stroke-width="27" stroke-linejoin="miter" stroke-linecap="butt">
+    <path class="tower" d="M378,845 V627 L498,549"/>
+    <path class="tower" d="M498,725 V322 L619,201"/>
+    <path class="tower" d="M619,362 V64 L746,194 V570"/>
+    <path class="tower" d="M571,652 V428 L686,313 V598"/>
+    <path class="tower" d="M694,563 L805,627 V718"/>
+    <path class="tower" d="M754,513 L932,621 V845"/>
+    <path class="ground" d="M38,901 H357 L656,602 L955,901 H1295"/>
+  </g>
+  <g class="window" fill="url(#taqwaGold)">
+    <path d="M607,818 V800 Q607,772 635,772 H652 V818 Z"/>
+    <path d="M658,772 H675 Q703,772 703,800 V818 H658 Z"/>
+    <rect x="607" y="823" width="45" height="44"/>
+    <rect x="658" y="823" width="45" height="44"/>
+  </g>
+</svg>

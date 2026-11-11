@@ -1,0 +1,314 @@
+/* ==========================================================================
+   Reset
+   ========================================================================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--ink);
+  color: var(--text-light);
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+ul,
+ol {
+  margin: 0;
+}
+
+ul,
+ol {
+  padding: 0;
+  list-style: none;
+}
+
+img,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+img {
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+::selection {
+  background: var(--gold-500);
+  color: var(--ink);
+}
+
+:focus-visible {
+  outline: 2px solid var(--gold-500);
+  outline-offset: 3px;
+}
+
+/* ==========================================================================
+   Lenis
+   ========================================================================== */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+html.is-scroll-locked,
+html.is-scroll-locked body {
+  overflow: hidden;
+}
+
+/* ==========================================================================
+   Layout helpers
+   ========================================================================== */
+.container {
+  width: 100%;
+  max-width: calc(var(--max-w) + var(--gutter) * 2);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.section {
+  position: relative;
+  padding-block: var(--section-py);
+}
+
+.theme-ink {
+  background: var(--ink);
+  color: var(--text-light);
+  --line: var(--line-dark);
+  --muted: var(--stone);
+  --accent-text: var(--gold-500);
+}
+
+.theme-ivory {
+  background: var(--ivory);
+  color: var(--text-dark);
+  --line: var(--line-light);
+  --muted: #6f685e; /* stone darkened for AA on ivory */
+  --accent-text: var(--gold-900);
+}
+
+.theme-sand {
+  background: var(--sand);
+  color: var(--text-dark);
+  --line: var(--line-light);
+  --muted: #6a6359;
+  --accent-text: var(--gold-900);
+}
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+.t-hero {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: var(--fs-hero);
+  line-height: 0.95;
+  letter-spacing: -0.015em;
+}
+
+.t-h2 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: var(--fs-h2);
+  line-height: 1.02;
+  letter-spacing: -0.01em;
+}
+
+.t-h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: var(--fs-h3);
+  line-height: 1.15;
+}
+
+.t-body {
+  font-size: var(--fs-body);
+  line-height: 1.7;
+  max-width: 62ch;
+}
+
+.t-muted {
+  color: var(--muted, var(--stone));
+}
+
+.t-label {
+  font-family: var(--font-label);
+  font-size: var(--fs-label);
+  font-weight: 400;
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--accent-text, var(--gold-500));
+}
+
+/* Italic accent word inside a headline: Cormorant italic + gold gradient fill */
+.t-accent {
+  font-style: italic;
+  font-weight: 500;
+}
+
+/* Gradient used for gold text; deeper on light themes for contrast */
+:root,
+.theme-ink {
+  --text-gold: var(--gold-gradient);
+}
+
+.theme-ivory,
+.theme-sand {
+  --text-gold: var(--gold-gradient-deep);
+}
+
+.text-gold,
+.text-gold .word,
+.text-gold .char {
+  background-image: var(--text-gold);
+  background-size: 100% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Italic glyphs overhang their box; give clipped gradient text room */
+.t-accent.text-gold,
+.t-accent.text-gold .word {
+  padding-right: 0.08em;
+  margin-right: -0.04em;
+}
+
+/* One-time sheen sweep across gradient text. Add class `.is-sheening` to run it. */
+.sheen.is-sheening,
+.sheen.is-sheening .word,
+.sheen.is-sheening .char {
+  background-image:
+    linear-gradient(110deg, transparent 35%, rgba(255, 252, 235, 0.95) 50%, transparent 65%),
+    var(--text-gold);
+  background-size: 250% 100%, 100% 100%;
+  background-repeat: no-repeat;
+  animation: sheen 1.4s var(--ease-inout) forwards;
+}
+
+@keyframes sheen {
+  from {
+    background-position: 160% 0, 0 0;
+  }
+  to {
+    background-position: -60% 0, 0 0;
+  }
+}
+
+/* ==========================================================================
+   Split-text masks (used by RevealText)
+   ========================================================================== */
+.rt-mask {
+  display: block;
+  overflow: hidden;
+  /* room for descenders and italic overhang without clipping */
+  padding-bottom: 0.08em;
+  margin-bottom: -0.08em;
+  padding-inline: 0.06em;
+  margin-inline: -0.06em;
+}
+
+.rt-mask--inline {
+  display: inline-block;
+  vertical-align: top;
+}
+
+/* ==========================================================================
+   Accessibility
+   ========================================================================== */
+.sr-only {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.skip-link {
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  z-index: 10000;
+  padding: 10px 16px;
+  background: var(--gold-500);
+  color: var(--ink);
+  font-family: var(--font-label);
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  transform: translateY(-200%);
+}
+
+.skip-link:focus-visible {
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.3s !important;
+    scroll-behavior: auto !important;
+  }
+}

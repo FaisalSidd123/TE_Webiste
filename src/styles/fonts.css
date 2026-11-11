@@ -1,0 +1,28 @@
+/*
+  Fonts are loaded from Google Fonts in index.html (preconnected, display=swap).
+  Noto Nastaliq Urdu is subset to the single word "تقویٰ" with the `text=` parameter,
+  so it costs a few KB instead of ~1MB.
+
+  This file holds font-feature defaults per family.
+*/
+.font-display,
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  font-feature-settings: 'onum' 1, 'kern' 1, 'liga' 1;
+}
+
+.font-label {
+  font-family: var(--font-label);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-label);
+  font-weight: 400;
+}
+
+.font-urdu {
+  font-family: var(--font-urdu);
+  font-weight: 400;
+  line-height: 1.8;
+}

@@ -1,0 +1,153 @@
+.preloader {
+  --mark-w: clamp(160px, 42vw, 220px);
+  /* width of the house (x 357→955 of 1330) — the screen line leaves a gap there */
+  --house-w: calc(var(--mark-w) * 598 / 1330);
+
+  position: fixed;
+  inset: 0;
+  z-index: 9500;
+}
+
+.preloader--fade {
+  background: var(--ink);
+}
+
+.preloader__panel {
+  position: absolute;
+  left: 0;
+  right: 0;
+  background: var(--ink);
+  will-change: transform;
+}
+
+/* Split exactly on the ground line. Top panel overlaps by 1px to avoid a seam. */
+.preloader__panel--top {
+  top: 0;
+  height: calc(50% + 1px);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 1px;
+}
+
+.preloader__panel--bottom {
+  top: 50%;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: clamp(22px, 4vh, 36px);
+}
+
+.preloader__mark {
+  width: var(--mark-w);
+  /* push the SVG down so its ground line (y=901 of 930) sits on the split */
+  margin-bottom: calc(var(--mark-w) * -29 / 1330);
+}
+
+.preloader__mark svg {
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.preloader__line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  z-index: 2;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold-700) 15%, var(--gold-500) 45%, var(--gold-500) 55%, var(--gold-700) 85%, transparent);
+  transform: scaleX(0);
+  transform-origin: center;
+  /* no line through the house — the mark's roof sits there */
+  -webkit-mask-image: linear-gradient(
+    90deg,
+    #000 calc(50% - var(--house-w) / 2),
+    transparent calc(50% - var(--house-w) / 2),
+    transparent calc(50% + var(--house-w) / 2),
+    #000 calc(50% + var(--house-w) / 2)
+  );
+  mask-image: linear-gradient(
+    90deg,
+    #000 calc(50% - var(--house-w) / 2),
+    transparent calc(50% - var(--house-w) / 2),
+    transparent calc(50% + var(--house-w) / 2),
+    #000 calc(50% + var(--house-w) / 2)
+  );
+}
+
+.preloader__brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.preloader__mask {
+  display: block;
+  overflow: hidden;
+  padding: 0 0.1em 0.06em;
+}
+
+.preloader__brand-line {
+  display: block;
+}
+
+.preloader__word {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(2.2rem, 7vw, 3rem);
+  line-height: 1;
+  letter-spacing: 0.06em;
+  margin-right: -0.06em;
+  background-image: var(--gold-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+.preloader__sub {
+  margin-top: 6px;
+  font-family: var(--font-label);
+  font-weight: 500;
+  font-size: 0.66rem;
+  letter-spacing: 0.5em;
+  margin-right: -0.5em;
+  color: var(--text-light);
+}
+
+.preloader__meta {
+  position: absolute;
+  left: var(--gutter);
+  right: var(--gutter);
+  bottom: clamp(24px, 5vh, 44px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--font-label);
+  font-size: 0.72rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--stone);
+}
+
+.preloader__count {
+  font-variant-numeric: tabular-nums;
+  color: var(--gold-500);
+}
+
+.preloader__skip {
+  font-family: inherit;
+  font-size: inherit;
+  letter-spacing: inherit;
+  text-transform: inherit;
+  color: inherit;
+  padding: 8px 0;
+  transition: color 0.3s var(--ease-out);
+}
+
+.preloader__skip:hover {
+  color: var(--gold-300);
+}
