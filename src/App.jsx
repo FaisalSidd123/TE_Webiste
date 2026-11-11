@@ -19,7 +19,7 @@ export default function App() {
     requestAnimationFrame(() => ScrollTrigger.refresh());
   }, []);
 
-  const intro = useMemo(() => ({ revealed }), [revealed]);
+  const intro = useMemo(() => ({ revealed, ready: !loading }), [revealed, loading]);
 
   return (
     <SmoothScrollProvider>

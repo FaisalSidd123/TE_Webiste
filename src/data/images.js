@@ -5,18 +5,28 @@
 const UNSPLASH = 'https://images.unsplash.com/';
 const WIDTHS = [480, 800, 1200, 1800];
 
-const url = (id, w) => `${UNSPLASH}${id}?auto=format&fit=crop&w=${w}&q=72`;
+const url = (id, w, ar) => `${UNSPLASH}${id}?auto=format&fit=crop&w=${w}&q=72${ar ? `&ar=${ar}` : ''}`;
 
-/** Builds a responsive image record (auto=format serves WebP/AVIF where supported). */
-const photo = (id, alt, width, height) => ({
-  src: url(id, 1200),
-  srcSet: WIDTHS.map((w) => `${url(id, w)} ${w}w`).join(', '),
+/**
+ * Builds a responsive image record (auto=format serves WebP/AVIF where supported).
+ * `ar` (e.g. '4:5') asks the CDN for that crop so portrait frames don't download a landscape file.
+ */
+const photo = (id, alt, width, height, ar) => ({
+  src: url(id, 1200, ar),
+  srcSet: WIDTHS.map((w) => `${url(id, w, ar)} ${w}w`).join(', '),
   alt,
   width,
   height,
 });
 
 export const IMAGES = {
+  heroHome: photo(
+    'photo-1600585154340-be6161a56a0c',
+    'Modern two-storey home with timber cladding and warm interior lights at dusk',
+    1000,
+    1250,
+    '4:5',
+  ),
   homeDusk: photo(
     'photo-1600585154340-be6161a56a0c',
     'Modern two-storey home with timber cladding and warm interior lights at dusk',

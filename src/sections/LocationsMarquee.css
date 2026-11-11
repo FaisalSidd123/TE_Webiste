@@ -1,0 +1,59 @@
+/* The section is half ink, half ivory; the skewed band sits across the seam. */
+.locations {
+  position: relative;
+  z-index: 2;
+  padding-block: 40px;
+  background: linear-gradient(180deg, var(--ink) 50%, var(--ivory) 50%);
+  overflow: hidden;
+}
+
+.locations__band {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  min-height: 120px;
+  margin-inline: -4vw;
+  padding-block: 18px;
+  background: var(--ink-2);
+  border-block: 1px solid rgba(212, 167, 58, 0.45);
+  transform: rotate(-2deg);
+}
+
+.loc-item {
+  display: inline-flex;
+  align-items: center;
+}
+
+.loc-star {
+  width: 0.38em;
+  height: 0.38em;
+  margin-inline: 0.7em;
+  fill: var(--gold-500);
+  flex: none;
+}
+
+.locations__row--outline .loc-item {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 500;
+  font-size: clamp(2.2rem, 4.4vw, 3.6rem);
+  line-height: 1.05;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--gold-500);
+}
+
+.locations__row--solid .loc-item {
+  font-family: var(--font-label);
+  font-weight: 400;
+  font-size: clamp(0.72rem, 0.9vw, 0.85rem);
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--text-light);
+}
+
+.locations__row--solid .loc-star {
+  width: 0.7em;
+  height: 0.7em;
+  margin-inline: 1.6em;
+}

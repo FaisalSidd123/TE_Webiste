@@ -1,0 +1,11 @@
+.marquee {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.marquee__track,
+.marquee__half {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+}
