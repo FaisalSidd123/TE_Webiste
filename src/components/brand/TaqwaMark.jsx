@@ -21,7 +21,13 @@ const TOWERS = [
   'M619,362 V64 L746,194 V570',
 ];
 
-const GROUND = 'M38,901 H357 L656,602 L955,901 H1295';
+/** Gradient stops per background tone. 'dark' matches the original mark; 'light' is deep bronze for ivory/sand. */
+const GRADIENTS = {
+  dark: ['#F3E66C', '#E8C65A', '#D9A441'],
+  light: ['#D4A73A', '#B57E23', '#8A5A17'],
+};
+
+const GROUND ='M38,901 H357 L656,602 L955,901 H1295';
 // Split pieces for sequenced drawing (preloader): ground from the house outward, roof up to the peak.
 const PIECES = {
   'tm-ground-l': 'M357,901 H38',
@@ -34,6 +40,8 @@ const PIECES = {
  * <TaqwaMark />
  *  - strokeWidth  in viewBox units (27 = original). At ~220px wide, 27 ≈ 4.5px.
  *  - color        'gradient' (brand gold) or any CSS colour / var().
+ *  - tone         background the mark sits on: 'dark' (light gold, default) | 'light' (gold-500 → gold-900).
+ *                 Always pass tone="light" on ivory and sand sections.
  *  - animate      draws itself (ground → roof → towers, then window fades in).
  *  - animateOn    'scroll' (default, once on enter) | 'mount'
  *  - scrub        ties the draw to scroll position instead of playing once.
@@ -43,6 +51,7 @@ const PIECES = {
 export default function TaqwaMark({
   strokeWidth = 27,
   color = 'gradient',
+  tone = 'dark',
   animate = false,
   animateOn = 'scroll',
   drawDuration = 2.4,
@@ -104,9 +113,9 @@ export default function TaqwaMark({
         <defs>
           {/* userSpaceOnUse: horizontal pieces have a zero-height bbox */}
           <linearGradient id={gid} gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1330" y2="930">
-            <stop offset="0" stopColor="#F3E66C" />
-            <stop offset="0.55" stopColor="#E8C65A" />
-            <stop offset="1" stopColor="#D9A441" />
+            {(GRADIENTS[tone] ?? GRADIENTS.dark).map((c, i) => (
+              <stop key={c} offset={[0, 0.55, 1][i]} stopColor={c} />
+            ))}
           </linearGradient>
         </defs>
       )}

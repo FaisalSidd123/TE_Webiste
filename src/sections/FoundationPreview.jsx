@@ -1,11 +1,11 @@
 /*
-  TEMPORARY review page for build steps 1–2 (design system, motion primitives, brand).
+  TEMPORARY review page for build steps 1–3 (design system, motion primitives, brand, navigation).
+  The placeholder blocks at the end carry the real nav ids so the navbar's active underline can be checked.
   It is replaced by the real Hero and sections in step 4 — delete this file and its CSS then.
 */
 import { useIntro } from '../hooks/useIntro';
 import { IMAGES } from '../data/images';
 import TaqwaMark from '../components/brand/TaqwaMark';
-import LogoLockup from '../components/brand/LogoLockup';
 import GroundLine from '../components/brand/GroundLine';
 import RevealText from '../components/motion/RevealText';
 import RevealImage from '../components/motion/RevealImage';
@@ -29,6 +29,15 @@ const SWATCHES = [
   ['--gold-900', '#8A5A17'],
 ];
 
+const PLACEHOLDERS = [
+  ['about', 'About', 'theme-ivory', 5],
+  ['services', 'Services', 'theme-sand', 6],
+  ['process', 'Process', 'theme-ink', 6],
+  ['properties', 'Properties', 'theme-ivory', 7],
+  ['projects', 'Projects', 'theme-ink', 7],
+  ['contact', 'Contact', 'theme-ivory', 9],
+];
+
 const sheen = (el) => el.querySelectorAll('.sheen').forEach((s) => s.classList.add('is-sheening'));
 
 export default function FoundationPreview() {
@@ -38,11 +47,6 @@ export default function FoundationPreview() {
   return (
     <>
       <section className="fp-hero theme-ink" aria-labelledby="fp-title">
-        <div className="fp-bar container">
-          <LogoLockup tone="light" />
-          <span className="t-label">Build review · Steps 1–2</span>
-        </div>
-
         <TaqwaMark
           className="fp-hero__bgmark"
           color="var(--gold-500)"
@@ -138,7 +142,7 @@ export default function FoundationPreview() {
           </div>
           <div className="fp-logos">
             <img src="/brand/taqwa-logo-light-bg.png" alt="Taqwa Enterprises logo" width="1871" height="1635" />
-            <TaqwaMark className="fp-draw" animate title="Taqwa mark drawing itself" />
+            <TaqwaMark className="fp-draw" tone="light" animate title="Taqwa mark drawing itself" />
             <p className="t-label">Draw on scroll · useDrawSVG</p>
           </div>
         </div>
@@ -153,6 +157,23 @@ export default function FoundationPreview() {
           </div>
         </div>
       </section>
+
+      {PLACEHOLDERS.map(([id, label, theme, step], i) => (
+        <section key={id} id={id} className={`section ${theme} fp-placeholder`} aria-label={`${label} (placeholder)`}>
+          <div className="container fp-placeholder__inner">
+            <SectionLabel index={String(i + 3).padStart(2, '0')}>{label}</SectionLabel>
+            <p className="t-h2">
+              {label} <em className="t-accent text-gold">placeholder</em>
+            </p>
+            <p className="t-body t-muted">Built in step {step}. This block exists so the navbar can be tested.</p>
+            {id === 'properties' && (
+              <div className="fp-placeholder__card" data-cursor="view">
+                <RevealImage {...IMAGES.villaPool} arched />
+              </div>
+            )}
+          </div>
+        </section>
+      ))}
     </>
   );
 }

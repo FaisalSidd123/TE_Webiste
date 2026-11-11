@@ -5,6 +5,8 @@ import { ScrollTrigger } from './lib/gsap';
 import SmoothScrollProvider from './components/layout/SmoothScrollProvider';
 import Preloader from './components/layout/Preloader';
 import GrainOverlay from './components/layout/GrainOverlay';
+import Navbar from './components/layout/Navbar';
+import Cursor from './components/layout/Cursor';
 import Home from './pages/Home';
 
 export default function App() {
@@ -26,10 +28,12 @@ export default function App() {
           Skip to content
         </a>
         {loading && <Preloader onReveal={handleReveal} onDone={handleDone} />}
+        <Navbar />
         <Routes>
           <Route path="*" element={<Home />} />
         </Routes>
         <GrainOverlay />
+        <Cursor />
       </IntroContext.Provider>
     </SmoothScrollProvider>
   );

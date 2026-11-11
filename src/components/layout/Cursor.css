@@ -1,0 +1,99 @@
+/* Native cursor is hidden only while the custom cursor is active (mouse in use). */
+html.has-custom-cursor,
+html.has-custom-cursor * {
+  cursor: none !important;
+}
+
+html.has-custom-cursor :is(input, textarea, [contenteditable='true']) {
+  cursor: text !important;
+}
+
+.cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9600;
+  pointer-events: none;
+  transition: opacity 0.3s var(--ease-out);
+}
+
+.cursor.is-hidden,
+.cursor[data-state='text'] {
+  opacity: 0;
+}
+
+.cursor__dot,
+.cursor__ring {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  will-change: transform;
+}
+
+.cursor__dot {
+  width: 8px;
+  height: 8px;
+  background: var(--gold-500);
+  transition:
+    opacity 0.3s var(--ease-out),
+    width 0.3s var(--ease-out),
+    height 0.3s var(--ease-out);
+}
+
+.cursor__ring {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--gold-500);
+  transition:
+    width 0.5s var(--ease-expo),
+    height 0.5s var(--ease-expo),
+    background-color 0.5s var(--ease-out),
+    border-color 0.5s var(--ease-out);
+}
+
+.cursor__label {
+  font-family: var(--font-label);
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.24em;
+  margin-right: -0.24em;
+  text-transform: uppercase;
+  color: var(--ink);
+  opacity: 0;
+  transform: scale(0.6);
+  transition:
+    opacity 0.3s var(--ease-out),
+    transform 0.5s var(--ease-expo);
+}
+
+/* Links: ring tightens around the dot */
+.cursor[data-state='link'] .cursor__ring {
+  width: 20px;
+  height: 20px;
+  border-color: var(--gold-300);
+}
+
+/* Images and project cards: big gold disc that reads VIEW */
+.cursor[data-state='view'] .cursor__ring {
+  width: 90px;
+  height: 90px;
+  background-color: var(--gold-500);
+  border-color: var(--gold-500);
+}
+
+.cursor[data-state='view'] .cursor__label {
+  opacity: 1;
+  transform: none;
+}
+
+.cursor[data-state='view'] .cursor__dot {
+  opacity: 0;
+}
+
+.cursor.is-pressed .cursor__dot {
+  width: 5px;
+  height: 5px;
+}
