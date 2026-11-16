@@ -278,6 +278,31 @@ html.is-scroll-locked body {
 }
 
 /* ==========================================================================
+   Architectural Curved Sections & Card Templates
+   ========================================================================== */
+.section--curved-top {
+  border-radius: clamp(32px, 5vw, 56px) clamp(32px, 5vw, 56px) 0 0;
+  margin-top: -36px;
+  position: relative;
+  z-index: 3;
+  box-shadow: 0 -16px 40px rgba(0, 0, 0, 0.04);
+  border-top: 1px solid var(--line-gold);
+}
+
+.card-curved {
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--line);
+  background: var(--white);
+  transition: transform 0.4s var(--ease-out), box-shadow 0.4s var(--ease-out), border-color 0.4s;
+}
+
+.card-curved:hover {
+  transform: translateY(-4px);
+  border-color: var(--line-gold);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.06);
+}
+
+/* ==========================================================================
    Accessibility
    ========================================================================== */
 .sr-only {

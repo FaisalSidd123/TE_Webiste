@@ -1,11 +1,6 @@
-/* Native cursor is hidden only while the custom cursor is active (mouse in use). */
-html.has-custom-cursor,
-html.has-custom-cursor * {
-  cursor: none !important;
-}
-
-html.has-custom-cursor :is(input, textarea, [contenteditable='true']) {
-  cursor: text !important;
+/* Native cursor is preserved for effortless usability and dignity */
+html.has-custom-cursor {
+  /* Native cursor remains crisp */
 }
 
 .cursor {
@@ -14,12 +9,13 @@ html.has-custom-cursor :is(input, textarea, [contenteditable='true']) {
   left: 0;
   z-index: 9600;
   pointer-events: none;
-  transition: opacity 0.3s var(--ease-out);
+  transition: opacity 0.25s var(--ease-out);
 }
 
 .cursor.is-hidden,
-.cursor[data-state='text'] {
-  opacity: 0;
+.cursor[data-state='text'],
+.cursor[data-state='link'] {
+  opacity: 0; /* Fade cleanly when over text or interactive links so words are never obscured */
 }
 
 .cursor__dot,
@@ -32,68 +28,61 @@ html.has-custom-cursor :is(input, textarea, [contenteditable='true']) {
 }
 
 .cursor__dot {
-  width: 8px;
-  height: 8px;
-  background: var(--gold-500);
-  transition:
-    opacity 0.3s var(--ease-out),
-    width 0.3s var(--ease-out),
-    height 0.3s var(--ease-out);
+  width: 6px;
+  height: 6px;
+  background: var(--gold-700);
+  opacity: 0.8;
+  transition: opacity 0.2s var(--ease-out), transform 0.2s var(--ease-out);
 }
 
 .cursor__ring {
   display: grid;
   place-items: center;
-  width: 36px;
-  height: 36px;
-  border: 1px solid var(--gold-500);
+  width: 28px;
+  height: 28px;
+  border: 1px solid rgba(195, 151, 56, 0.4);
+  background: rgba(195, 151, 56, 0.04);
   transition:
-    width 0.5s var(--ease-expo),
-    height 0.5s var(--ease-expo),
-    background-color 0.5s var(--ease-out),
-    border-color 0.5s var(--ease-out);
+    width 0.35s var(--ease-expo),
+    height 0.35s var(--ease-expo),
+    background-color 0.3s var(--ease-out),
+    border-color 0.3s var(--ease-out),
+    opacity 0.25s var(--ease-out);
 }
 
 .cursor__label {
   font-family: var(--font-label);
-  font-size: 0.68rem;
-  font-weight: 500;
-  letter-spacing: 0.24em;
-  margin-right: -0.24em;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--ink);
+  color: var(--white);
   opacity: 0;
-  transform: scale(0.6);
+  transform: scale(0.7);
   transition:
-    opacity 0.3s var(--ease-out),
-    transform 0.5s var(--ease-expo);
+    opacity 0.25s var(--ease-out),
+    transform 0.35s var(--ease-expo);
 }
 
-/* Links: ring tightens around the dot */
-.cursor[data-state='link'] .cursor__ring {
-  width: 20px;
-  height: 20px;
-  border-color: var(--gold-300);
-}
-
-/* Images and project cards: big gold disc that reads VIEW */
+/* Subtle magnetic view disc over portfolio / property gallery */
 .cursor[data-state='view'] .cursor__ring {
-  width: 90px;
-  height: 90px;
-  background-color: var(--gold-500);
+  width: 76px;
+  height: 76px;
+  background-color: var(--gold-700);
   border-color: var(--gold-500);
+  box-shadow: 0 8px 24px rgba(158, 116, 34, 0.35);
 }
 
 .cursor[data-state='view'] .cursor__label {
   opacity: 1;
-  transform: none;
+  transform: scale(1);
 }
 
 .cursor[data-state='view'] .cursor__dot {
   opacity: 0;
 }
 
-.cursor.is-pressed .cursor__dot {
-  width: 5px;
-  height: 5px;
+/* Subtle click feedback */
+.cursor.is-pressed .cursor__ring {
+  transform: scale(0.9);
 }

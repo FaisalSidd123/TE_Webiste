@@ -6,6 +6,7 @@ import { scrollToTarget } from '../lib/smoothScroll';
 import TaqwaMark from '../components/brand/TaqwaMark';
 import Button from '../components/ui/Button';
 import Icon from '../components/ui/Icon';
+import CurvedCanopy from '../components/layout/CurvedCanopy';
 import './FinalCTA.css';
 
 export default function FinalCTA() {
@@ -81,6 +82,7 @@ export default function FinalCTA() {
 
   return (
     <section id="cta" ref={rootRef} className="final-cta theme-ink" aria-labelledby="final-cta-title">
+      <CurvedCanopy fill="var(--ink)" type="convex" height={48} withGoldLine={true} withStar={true} />
       {/* Huge background mark */}
       <div className="final-cta__bg-mark" aria-hidden="true">
         <TaqwaMark color="var(--gold-500)" strokeWidth={2} showWindow={true} />

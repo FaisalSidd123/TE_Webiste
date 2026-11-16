@@ -5,6 +5,7 @@ import { prefersReducedMotion, fontsReady } from '../lib/motion';
 import StarLattice from '../components/brand/StarLattice';
 import SectionLabel from '../components/ui/SectionLabel';
 import Icon from '../components/ui/Icon';
+import CurvedCanopy from '../components/layout/CurvedCanopy';
 import './About.css';
 
 export default function About() {
@@ -94,6 +95,7 @@ export default function About() {
 
   return (
     <section id="about" ref={rootRef} className="about section theme-ivory" aria-labelledby="about-title">
+      <CurvedCanopy fill="var(--ivory)" type="convex" height={42} withGoldLine={true} withStar={true} />
       <StarLattice opacity={0.05} />
 
       <div className="container about__container">
@@ -148,8 +150,6 @@ export default function About() {
                 </p>
               </div>
 
-              <div className="about__pillar-divider" aria-hidden="true" />
-
               <div className="about__pillar">
                 <div className="about__pillar-icon">
                   <Icon name="document" size={24} />
@@ -159,8 +159,6 @@ export default function About() {
                   Exhaustive legal vetting across all Karachi civic authorities before you commit a single rupee.
                 </p>
               </div>
-
-              <div className="about__pillar-divider" aria-hidden="true" />
 
               <div className="about__pillar">
                 <div className="about__pillar-icon">

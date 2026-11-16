@@ -39,26 +39,31 @@
   --line-dark: rgba(255, 255, 255, 0.1);
   --line-gold: rgba(195, 151, 56, 0.35);
 
-  /* Typography */
+  /* Typography — Luxury Editorial & Architectural */
   --font-display: 'Cormorant Garamond', 'Times New Roman', serif;
-  --font-label: 'Oswald', 'Arial Narrow', sans-serif;
-  --font-body: 'Manrope', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-label: 'Plus Jakarta Sans', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-body: 'Manrope', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
   --font-urdu: 'Noto Nastaliq Urdu', serif;
 
-  /* Well-proportioned Type Scale (No overflow or text crowding) */
+  /* Well-proportioned Type Scale */
   --fs-hero: clamp(2.5rem, 5vw, 4.4rem);
   --fs-h2: clamp(2rem, 3.6vw, 3.2rem);
   --fs-h3: clamp(1.25rem, 1.8vw, 1.75rem);
   --fs-body: clamp(0.95rem, 1vw, 1.05rem);
-  --fs-label: 0.76rem;
-  --tracking-label: 0.22em;
+  --fs-label: 0.74rem;
+  --tracking-label: 0.12em;
 
-  /* Layout */
+  /* Layout & Architectural Radii */
   --max-w: 1280px;
   --gutter: clamp(20px, 4.5vw, 72px);
   --section-py: clamp(80px, 11vh, 140px);
   --nav-h: 84px;
-  --radius: 2px;
+  --radius-sm: 6px;
+  --radius-md: 14px;
+  --radius-lg: 24px;
+  --radius-xl: 36px;
+  --radius-canopy: 48px;
+  --radius: 8px;
 
   /* Motion */
   --ease-out: cubic-bezier(0.215, 0.61, 0.355, 1);

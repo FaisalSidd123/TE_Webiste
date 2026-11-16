@@ -35,10 +35,10 @@ function CursorFollower() {
       const html = document.documentElement;
 
       gsap.set([dot, ring], { xPercent: -50, yPercent: -50 });
-      const dotX = gsap.quickTo(dot, 'x', { duration: 0.12, ease: 'power3.out' });
-      const dotY = gsap.quickTo(dot, 'y', { duration: 0.12, ease: 'power3.out' });
-      const ringX = gsap.quickTo(ring, 'x', { duration: 0.55, ease: 'power3.out' });
-      const ringY = gsap.quickTo(ring, 'y', { duration: 0.55, ease: 'power3.out' });
+      const dotX = gsap.quickTo(dot, 'x', { duration: 0.08, ease: 'power2.out' });
+      const dotY = gsap.quickTo(dot, 'y', { duration: 0.08, ease: 'power2.out' });
+      const ringX = gsap.quickTo(ring, 'x', { duration: 0.18, ease: 'power2.out' });
+      const ringY = gsap.quickTo(ring, 'y', { duration: 0.18, ease: 'power2.out' });
 
       let state = '';
       const setState = (next) => {

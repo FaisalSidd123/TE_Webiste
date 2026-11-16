@@ -2,6 +2,7 @@ import { useEffect, useRef, useState, useCallback } from 'react';
 import { TESTIMONIALS } from '../data/testimonials';
 import SectionLabel from '../components/ui/SectionLabel';
 import Icon from '../components/ui/Icon';
+import CurvedCanopy from '../components/layout/CurvedCanopy';
 import './Testimonials.css';
 
 const AUTO_ADVANCE_TIME = 7000;
@@ -68,6 +69,7 @@ export default function Testimonials() {
       onTouchStart={onTouchStart}
       onTouchEnd={onTouchEnd}
     >
+      <CurvedCanopy fill="var(--sand)" type="convex" height={42} withGoldLine={true} withStar={true} />
       <div className="container testimonials__container">
         <SectionLabel label="07 / TESTIMONIALS" className="testimonials__label" />
 

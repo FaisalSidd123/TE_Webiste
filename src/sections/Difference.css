@@ -8,7 +8,7 @@
 }
 
 .diff__title {
-  margin-bottom: 4rem;
+  margin-bottom: 3.5rem;
 }
 
 .diff-table {
@@ -16,6 +16,11 @@
   max-width: 1100px;
   display: flex;
   flex-direction: column;
+  background: var(--white);
+  border: 1px solid var(--line-light);
+  border-radius: var(--radius-xl);
+  padding: clamp(28px, 4vw, 52px);
+  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.04);
 }
 
 .diff-header-row {
@@ -23,28 +28,39 @@
   grid-template-columns: 1fr 1fr;
   gap: clamp(2rem, 5vw, 6rem);
   padding-bottom: 1.5rem;
-  border-bottom: 1px solid var(--line);
+  border-bottom: 1px solid var(--line-light);
 }
 
 .diff-col-header--left {
   color: var(--stone);
-  font-size: 0.88rem;
-  letter-spacing: 0.25em;
+  font-family: var(--font-label);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
 }
 
 .diff-col-header--right {
   color: var(--gold-900);
-  font-size: 0.88rem;
-  letter-spacing: 0.25em;
+  font-family: var(--font-label);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
 }
 
 .diff-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: clamp(2rem, 5vw, 6rem);
-  padding: 2.2rem 0;
-  border-bottom: 1px solid var(--line);
+  padding: 2rem 0;
+  border-bottom: 1px solid var(--line-light);
   align-items: center;
+}
+
+.diff-row:last-child {
+  border-bottom: 0;
+  padding-bottom: 0.5rem;
 }
 
 .diff-left {
@@ -54,36 +70,35 @@
 
 .diff-text--usual {
   color: var(--stone);
-  font-size: 1.05rem;
+  font-size: 1rem;
   line-height: 1.6;
 }
 
 .diff-strike {
   position: absolute;
-  top: 52%;
+  top: 50%;
   left: 0;
-  width: 100%;
+  right: 0;
   height: 1px;
   background: var(--stone);
-  opacity: 0.45;
   transform-origin: left;
+  opacity: 0.65;
 }
 
 .diff-right {
   display: flex;
-  align-items: flex-start;
-  gap: 1rem;
+  align-items: center;
+  gap: 1.25rem;
 }
 
-.diff-check {
-  color: var(--gold-900);
-  margin-top: 3px;
+.diff-icon {
+  color: var(--gold-700);
   flex-shrink: 0;
 }
 
 .diff-text--taqwa {
   color: var(--text-dark);
-  font-size: 1.08rem;
+  font-size: 1.05rem;
   font-weight: 500;
   line-height: 1.6;
 }
@@ -95,11 +110,7 @@
 
   .diff-row {
     grid-template-columns: 1fr;
-    gap: 1.25rem;
-    padding: 1.75rem 0;
-  }
-
-  .diff-strike {
-    top: 50%;
+    gap: 1rem;
+    padding: 1.5rem 0;
   }
 }

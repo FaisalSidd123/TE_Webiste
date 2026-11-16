@@ -2,7 +2,7 @@
 .locations {
   position: relative;
   z-index: 2;
-  padding-block: 28px;
+  padding-block: 26px;
   background: var(--sand);
   border-block: 1px solid var(--line-light);
   overflow: hidden;
@@ -12,7 +12,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 12px;
+  gap: 10px;
 }
 
 .loc-item {
@@ -21,9 +21,9 @@
 }
 
 .loc-star {
-  width: 0.35em;
-  height: 0.35em;
-  margin-inline: 0.8em;
+  width: 0.38em;
+  height: 0.38em;
+  margin-inline: 0.9em;
   fill: var(--gold-700);
   flex: none;
 }
@@ -32,24 +32,24 @@
   font-family: var(--font-display);
   font-style: italic;
   font-weight: 500;
-  font-size: clamp(1.8rem, 3.2vw, 2.5rem);
-  line-height: 1.1;
+  font-size: clamp(1.6rem, 2.8vw, 2.3rem);
+  line-height: 1.15;
   color: var(--text-dark);
-  letter-spacing: 0.01em;
+  letter-spacing: 0.02em;
 }
 
 .locations__row--solid .loc-item {
   font-family: var(--font-label);
-  font-weight: 500;
-  font-size: clamp(0.72rem, 0.82vw, 0.82rem);
-  letter-spacing: 0.28em;
+  font-weight: 600;
+  font-size: clamp(0.72rem, 0.8vw, 0.78rem);
+  letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: var(--stone);
+  color: var(--gold-900);
 }
 
 .locations__row--solid .loc-star {
-  width: 0.6em;
-  height: 0.6em;
-  margin-inline: 1.4em;
+  width: 0.55em;
+  height: 0.55em;
+  margin-inline: 1.2em;
   fill: var(--gold-700);
 }

@@ -54,7 +54,12 @@
 }
 
 .footer__heading {
-  color: var(--gold-500);
+  color: var(--gold-300);
+  font-family: var(--font-label);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
   margin-bottom: 1.5rem;
 }
 

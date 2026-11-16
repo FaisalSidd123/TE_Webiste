@@ -10,6 +10,7 @@ import StarLattice from '../brand/StarLattice';
 import GroundLine from '../brand/GroundLine';
 import Button from '../ui/Button';
 import Icon from '../ui/Icon';
+import CurvedCanopy from './CurvedCanopy';
 import './Footer.css';
 
 export default function Footer() {
@@ -70,6 +71,7 @@ export default function Footer() {
 
   return (
     <footer ref={rootRef} className="footer theme-ink" aria-labelledby="footer-title">
+      <CurvedCanopy fill="var(--ink)" type="convex" height={44} withGoldLine={true} withStar={true} />
       <StarLattice opacity={0.04} />
 
       <div className="container footer__container">

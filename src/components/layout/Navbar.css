@@ -53,9 +53,9 @@
   display: inline-block;
   padding: 8px 0;
   font-family: var(--font-label);
-  font-size: 0.78rem;
-  font-weight: 400;
-  letter-spacing: 0.22em;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--text-dark);
   transition: color 0.3s var(--ease-out);
@@ -65,9 +65,9 @@
   content: '';
   position: absolute;
   left: 0;
-  right: 0.22em; /* ignore trailing tracking */
+  right: 0.1em;
   bottom: 2px;
-  height: 1px;
+  height: 1.5px;
   background: var(--gold-500);
   transform: scaleX(0);
   transform-origin: right center;
@@ -106,9 +106,12 @@
 }
 
 .nav__cta.mbtn {
-  min-height: 44px;
-  padding: 0 22px;
-  font-size: 0.72rem;
+  min-height: 42px;
+  padding: 0 20px;
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  border-radius: var(--radius-sm);
   border-color: var(--gold-700);
   color: var(--gold-900);
 }
@@ -116,6 +119,7 @@
 .nav__cta.mbtn:hover {
   background: var(--gold-700);
   color: var(--white);
+  border-color: var(--gold-700);
 }
 
 @media (max-width: 1379px) {
