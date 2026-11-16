@@ -191,7 +191,8 @@
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: #4e734a; /* verified green indicator */
+  background: #4e734a;
+  /* verified green indicator */
 }
 
 /* Right half: Step Milestones */
