@@ -3,7 +3,6 @@ import { gsap, useGSAP } from '../lib/gsap';
 import { prefersReducedMotion } from '../lib/motion';
 import { PROCESS_STEPS } from '../data/process';
 import SectionLabel from '../components/ui/SectionLabel';
-import CurvedCanopy from '../components/layout/CurvedCanopy';
 import Icon from '../components/ui/Icon';
 import './Process.css';
 
@@ -50,8 +49,6 @@ export default function Process() {
 
   return (
     <section id="process" ref={rootRef} className="process theme-sand" aria-labelledby="process-title">
-      <CurvedCanopy fill="var(--sand)" type="convex" height={44} withGoldLine={true} withStar={true} />
-
       <div className="container process__container">
         <SectionLabel index="04" label="PROCESS" className="process__label" />
 

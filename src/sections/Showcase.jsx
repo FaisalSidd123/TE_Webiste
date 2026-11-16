@@ -5,7 +5,6 @@ import { PROJECTS } from '../data/projects';
 import SectionLabel from '../components/ui/SectionLabel';
 import BeforeAfter from '../components/ui/BeforeAfter';
 import Icon from '../components/ui/Icon';
-import CurvedCanopy from '../components/layout/CurvedCanopy';
 import './Showcase.css';
 
 export default function Showcase() {
@@ -39,7 +38,6 @@ export default function Showcase() {
 
   return (
     <section id="projects" ref={rootRef} className="showcase section theme-ivory" aria-labelledby="showcase-title">
-      <CurvedCanopy fill="var(--ivory)" type="concave" height={42} withGoldLine={true} />
       <div className="container">
         <SectionLabel label="05 / SIGNATURE MANDATES" className="showcase__label" />
 

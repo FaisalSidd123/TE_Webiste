@@ -4,7 +4,6 @@ import { prefersReducedMotion } from '../lib/motion';
 import { SERVICES } from '../data/services';
 import SectionLabel from '../components/ui/SectionLabel';
 import Icon from '../components/ui/Icon';
-import CurvedCanopy from '../components/layout/CurvedCanopy';
 import './Services.css';
 
 export default function Services() {
@@ -74,7 +73,6 @@ export default function Services() {
 
   return (
     <section id="services" ref={rootRef} className="services theme-sand" aria-labelledby="services-title">
-      <CurvedCanopy fill="var(--sand)" type="convex" height={42} withGoldLine={true} withStar={true} />
       <div className="services__pinned-wrap">
         {/* Horizontal track for desktop */}
         <div ref={trackRef} className="services__track">

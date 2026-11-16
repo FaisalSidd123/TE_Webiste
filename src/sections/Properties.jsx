@@ -7,7 +7,6 @@ import Tabs from '../components/ui/Tabs';
 import Drawer from '../components/ui/Drawer';
 import Button from '../components/ui/Button';
 import Icon from '../components/ui/Icon';
-import CurvedCanopy from '../components/layout/CurvedCanopy';
 import './Properties.css';
 
 export default function Properties() {
@@ -66,7 +65,6 @@ export default function Properties() {
 
   return (
     <section id="properties" ref={rootRef} className="properties section theme-ivory" aria-labelledby="properties-title">
-      <CurvedCanopy fill="var(--ivory)" type="convex" height={44} withGoldLine={true} withStar={true} />
       <div className="container">
         {/* Header row */}
         <div className="properties__header">

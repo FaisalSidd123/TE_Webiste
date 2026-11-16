@@ -2,10 +2,13 @@
   position: relative;
   background: var(--sand);
   color: var(--text-dark);
+  border-radius: clamp(28px, 4vw, 48px) clamp(28px, 4vw, 48px) 0 0;
+  margin-top: -32px;
+  z-index: 6;
+  box-shadow: 0 -14px 40px rgba(0, 0, 0, 0.035);
+  border-top: 1px solid rgba(195, 151, 56, 0.25);
   padding-block: var(--section-py);
   overflow: hidden;
-  border-top: 1px solid var(--line-light);
-  border-bottom: 1px solid var(--line-light);
 }
 
 .process__container {

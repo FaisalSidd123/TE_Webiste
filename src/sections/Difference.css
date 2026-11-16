@@ -1,6 +1,12 @@
 .difference {
   position: relative;
   background: var(--ivory);
+  border-radius: clamp(28px, 4vw, 48px) clamp(28px, 4vw, 48px) 0 0;
+  margin-top: -32px;
+  z-index: 10;
+  box-shadow: 0 -14px 40px rgba(0, 0, 0, 0.035);
+  border-top: 1px solid rgba(195, 151, 56, 0.25);
+  overflow: hidden;
 }
 
 .diff__label {

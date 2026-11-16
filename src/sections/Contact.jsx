@@ -5,7 +5,6 @@ import SectionLabel from '../components/ui/SectionLabel';
 import FormField from '../components/ui/FormField';
 import Button from '../components/ui/Button';
 import Icon from '../components/ui/Icon';
-import CurvedCanopy from '../components/layout/CurvedCanopy';
 import './Contact.css';
 
 const INTEREST_OPTIONS = [
@@ -87,7 +86,6 @@ export default function Contact() {
 
   return (
     <section id="contact" className="contact section theme-ivory" aria-labelledby="contact-title">
-      <CurvedCanopy fill="var(--ivory)" type="convex" height={44} withGoldLine={true} withStar={true} />
       <div className="container">
         <div className="contact__layout">
           {/* Left Column: Details & Embedded Map */}

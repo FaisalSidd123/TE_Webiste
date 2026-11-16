@@ -1,9 +1,12 @@
 .numbers {
   position: relative;
   background: var(--sand);
+  border-radius: clamp(28px, 4vw, 48px) clamp(28px, 4vw, 48px) 0 0;
+  margin-top: -32px;
+  z-index: 9;
+  box-shadow: 0 -14px 40px rgba(0, 0, 0, 0.035);
+  border-top: 1px solid rgba(195, 151, 56, 0.25);
   padding-block: clamp(60px, 9vh, 100px);
-  border-top: 1px solid var(--line-light);
-  border-bottom: 1px solid var(--line-light);
   overflow: hidden;
 }
 

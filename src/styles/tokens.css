@@ -4,28 +4,40 @@
 :root {
   /* Light Theme Surfaces (Core) */
   --white: #ffffff;
-  --ivory: #faf8f5;     /* Primary light background: serene, warm alabaster */
-  --sand: #f3efe6;      /* Subtle contrast background for cards and alternate sections */
+  --ivory: #faf8f5;
+  /* Primary light background: serene, warm alabaster */
+  --sand: #f3efe6;
+  /* Subtle contrast background for cards and alternate sections */
   --sand-dark: #eae3d5;
 
   /* Dark Theme Surfaces (Selective accent sections: Final CTA, Footer) */
-  --ink: #121110;       /* Rich warm onyx / deep charcoal */
-  --ink-2: #1b1917;     /* Raised dark surface */
-  --ink-3: #2a2723;     /* Subtle dark border */
+  --ink: #121110;
+  /* Rich warm onyx / deep charcoal */
+  --ink-2: #1b1917;
+  /* Raised dark surface */
+  --ink-3: #2a2723;
+  /* Subtle dark border */
 
   /* Text Colors */
-  --text-dark: #181614;   /* Primary body and heading text on light */
-  --text-muted: #5e5850;  /* Secondary / subtitle text on light (high AA contrast) */
-  --stone: #787168;       /* Subtle meta / label text */
-  --text-light: #f5f2eb;  /* Text on dark sections */
+  --text-dark: #181614;
+  /* Primary body and heading text on light */
+  --text-muted: #5e5850;
+  /* Secondary / subtitle text on light (high AA contrast) */
+  --stone: #787168;
+  /* Subtle meta / label text */
+  --text-light: #f5f2eb;
+  /* Text on dark sections */
   --text-light-muted: #a39c91;
 
   /* Architectural Gold & Bronze Palette (Refined, no harsh neon yellow) */
   --gold-100: #f6ecbe;
   --gold-300: #dfbf6d;
-  --gold-500: #c39738;    /* Core refined brand gold */
-  --gold-700: #9e7422;    /* Deep bronze gold for light backgrounds */
-  --gold-900: #745214;    /* Dark bronze for high-contrast typography */
+  --gold-500: #c39738;
+  /* Core refined brand gold */
+  --gold-700: #9e7422;
+  /* Deep bronze gold for light backgrounds */
+  --gold-900: #745214;
+  /* Dark bronze for high-contrast typography */
 
   --success: #4e734a;
   --error: #a84236;

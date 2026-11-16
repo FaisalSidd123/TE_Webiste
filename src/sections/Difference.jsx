@@ -4,7 +4,6 @@ import { prefersReducedMotion } from '../lib/motion';
 import { DIFFERENCE_ITEMS } from '../data/difference';
 import SectionLabel from '../components/ui/SectionLabel';
 import Icon from '../components/ui/Icon';
-import CurvedCanopy from '../components/layout/CurvedCanopy';
 import './Difference.css';
 
 export default function Difference() {
@@ -41,7 +40,6 @@ export default function Difference() {
 
   return (
     <section id="difference" ref={rootRef} className="difference section theme-ivory" aria-labelledby="diff-title">
-      <CurvedCanopy fill="var(--ivory)" type="convex" height={42} withGoldLine={true} withStar={true} />
       <div className="container">
         <SectionLabel label="06 / DIFFERENCE" className="diff__label" />
 

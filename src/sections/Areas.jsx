@@ -4,7 +4,6 @@ import { prefersReducedMotion } from '../lib/motion';
 import { AREAS } from '../data/areas';
 import { IMAGES } from '../data/images';
 import SectionLabel from '../components/ui/SectionLabel';
-import CurvedCanopy from '../components/layout/CurvedCanopy';
 import './Areas.css';
 
 // Coordinates on the 550x550 abstract Karachi map SVG
@@ -85,7 +84,6 @@ export default function Areas() {
       aria-labelledby="areas-title"
       onMouseMove={handleMouseMove}
     >
-      <CurvedCanopy fill="var(--ivory)" type="convex" height={42} withGoldLine={true} withStar={true} />
       <div className="container">
         <SectionLabel label="08 / LOCATIONS" className="areas__label" />
 
