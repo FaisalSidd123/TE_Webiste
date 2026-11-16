@@ -4,6 +4,6 @@ export const NAV_LINKS = [
   { id: 'services', label: 'Services' },
   { id: 'process', label: 'Process' },
   { id: 'properties', label: 'Properties' },
-  { id: 'projects', label: 'Projects' },
+  { id: 'projects', label: 'Portfolio' },
   { id: 'contact', label: 'Contact' },
 ];

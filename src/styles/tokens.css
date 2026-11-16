@@ -1,54 +1,66 @@
 /* ==========================================================================
-   Taqwa Enterprises — design tokens
+   Taqwa Enterprises — Design Tokens (Luxury Light Architectural Theme)
    ========================================================================== */
 :root {
-  /* Colour */
-  --ink: #0e0d0b;
-  --ink-2: #1a1815;
-  --ink-3: #2a2622;
-  --ivory: #f7f3ea;
-  --sand: #ece4d3;
-  --stone: #8c857a;
-  --text-dark: #1f1c1a;
-  --text-light: #ede7da;
+  /* Light Theme Surfaces (Core) */
+  --white: #ffffff;
+  --ivory: #faf8f5;     /* Primary light background: serene, warm alabaster */
+  --sand: #f3efe6;      /* Subtle contrast background for cards and alternate sections */
+  --sand-dark: #eae3d5;
 
-  --gold-100: #f3e66c;
-  --gold-300: #ebce5a;
-  --gold-500: #d4a73a;
-  --gold-700: #b57e23;
-  --gold-900: #8a5a17;
+  /* Dark Theme Surfaces (Selective accent sections: Final CTA, Footer) */
+  --ink: #121110;       /* Rich warm onyx / deep charcoal */
+  --ink-2: #1b1917;     /* Raised dark surface */
+  --ink-3: #2a2723;     /* Subtle dark border */
 
-  --success: #5e7d5a;
-  --error: #a3473b;
+  /* Text Colors */
+  --text-dark: #181614;   /* Primary body and heading text on light */
+  --text-muted: #5e5850;  /* Secondary / subtitle text on light (high AA contrast) */
+  --stone: #787168;       /* Subtle meta / label text */
+  --text-light: #f5f2eb;  /* Text on dark sections */
+  --text-light-muted: #a39c91;
 
-  --gold-gradient: linear-gradient(100deg, #f3e66c 0%, #ebce5a 30%, #d4a73a 60%, #b57e23 85%, #8a5a17 100%);
-  /* Darker variant so gradient text stays readable on ivory */
-  --gold-gradient-deep: linear-gradient(100deg, #c99a2e 0%, #b57e23 45%, #8a5a17 100%);
+  /* Architectural Gold & Bronze Palette (Refined, no harsh neon yellow) */
+  --gold-100: #f6ecbe;
+  --gold-300: #dfbf6d;
+  --gold-500: #c39738;    /* Core refined brand gold */
+  --gold-700: #9e7422;    /* Deep bronze gold for light backgrounds */
+  --gold-900: #745214;    /* Dark bronze for high-contrast typography */
 
-  --line-dark: var(--ink-3);
-  --line-light: rgba(31, 28, 26, 0.12);
+  --success: #4e734a;
+  --error: #a84236;
 
-  /* Type */
+  /* Gold Gradients */
+  --gold-gradient: linear-gradient(105deg, #dfbf6d 0%, #c39738 50%, #9e7422 100%);
+  --gold-gradient-deep: linear-gradient(105deg, #b88928 0%, #9e7422 60%, #745214 100%);
+
+  /* Borders & Dividers */
+  --line-light: rgba(24, 22, 20, 0.09);
+  --line-dark: rgba(255, 255, 255, 0.1);
+  --line-gold: rgba(195, 151, 56, 0.35);
+
+  /* Typography */
   --font-display: 'Cormorant Garamond', 'Times New Roman', serif;
   --font-label: 'Oswald', 'Arial Narrow', sans-serif;
   --font-body: 'Manrope', system-ui, -apple-system, 'Segoe UI', sans-serif;
   --font-urdu: 'Noto Nastaliq Urdu', serif;
 
-  --fs-hero: clamp(3.2rem, 8vw, 8.5rem);
-  --fs-h2: clamp(2.4rem, 5vw, 5rem);
-  --fs-h3: clamp(1.5rem, 2.4vw, 2.25rem);
-  --fs-body: clamp(1rem, 1.05vw, 1.125rem);
-  --fs-label: 0.78rem;
-  --tracking-label: 0.28em;
+  /* Well-proportioned Type Scale (No overflow or text crowding) */
+  --fs-hero: clamp(2.5rem, 5vw, 4.4rem);
+  --fs-h2: clamp(2rem, 3.6vw, 3.2rem);
+  --fs-h3: clamp(1.25rem, 1.8vw, 1.75rem);
+  --fs-body: clamp(0.95rem, 1vw, 1.05rem);
+  --fs-label: 0.76rem;
+  --tracking-label: 0.22em;
 
   /* Layout */
-  --max-w: 1320px;
-  --gutter: clamp(20px, 5vw, 80px);
-  --section-py: clamp(96px, 14vh, 180px);
+  --max-w: 1280px;
+  --gutter: clamp(20px, 4.5vw, 72px);
+  --section-py: clamp(80px, 11vh, 140px);
   --nav-h: 84px;
   --radius: 2px;
 
-  /* Motion (CSS mirrors of lib/motion.js) */
+  /* Motion */
   --ease-out: cubic-bezier(0.215, 0.61, 0.355, 1);
   --ease-inout: cubic-bezier(0.455, 0.03, 0.515, 0.955);
   --ease-expo: cubic-bezier(0.16, 1, 0.3, 1);

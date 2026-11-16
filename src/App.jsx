@@ -6,8 +6,11 @@ import SmoothScrollProvider from './components/layout/SmoothScrollProvider';
 import Preloader from './components/layout/Preloader';
 import GrainOverlay from './components/layout/GrainOverlay';
 import Navbar from './components/layout/Navbar';
+import Footer from './components/layout/Footer';
+import WhatsAppFloat from './components/layout/WhatsAppFloat';
 import Cursor from './components/layout/Cursor';
 import Home from './pages/Home';
+import Privacy from './pages/Privacy';
 
 export default function App() {
   const [revealed, setRevealed] = useState(false);
@@ -30,8 +33,12 @@ export default function App() {
         {loading && <Preloader onReveal={handleReveal} onDone={handleDone} />}
         <Navbar />
         <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/privacy" element={<Privacy />} />
           <Route path="*" element={<Home />} />
         </Routes>
+        <Footer />
+        <WhatsAppFloat />
         <GrainOverlay />
         <Cursor />
       </IntroContext.Provider>

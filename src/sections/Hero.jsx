@@ -64,11 +64,12 @@ export default function Hero() {
   );
 
   return (
-    <section id="top" ref={root} className="hero theme-ink" aria-labelledby="hero-title">
+    <section id="top" ref={root} className="hero theme-ivory" aria-labelledby="hero-title">
       <TaqwaMark
         className="hero__bgmark"
-        color="var(--gold-500)"
-        strokeWidth={1.6}
+        color="rgba(195, 151, 56, 0.12)"
+        tone="light"
+        strokeWidth={1.5}
         animate={revealed}
         animateOn="mount"
         drawDuration={3}
@@ -90,19 +91,19 @@ export default function Hero() {
             </span>{' '}
             <span className="rt-mask">
               <span className="hero__line">
-                Homes built to <em className="t-accent text-gold sheen">last</em>.
+                Investments made to <em className="t-accent text-gold sheen">grow</em>.
               </span>
             </span>
           </h1>
 
           <p className="hero__sub t-body">
-            Taqwa Enterprises guides families and investors through buying, selling and renting in Karachi, and builds
-            homes with the same care we would want for our own. Honest counsel, clear paperwork, quality you can see.
+            Taqwa Enterprises guides families, investors, and overseas Pakistanis through buying, selling, leasing, and
+            strategic property investments in Karachi. Honest counsel, clear paperwork, results you deserve.
           </p>
 
           <div className="hero__actions">
             <MagneticButton href="#contact">Book a Free Consultation</MagneticButton>
-            <TextLink href="#projects">Explore Our Work</TextLink>
+            <TextLink href="#properties">Explore Properties</TextLink>
           </div>
 
           <ul className="hero__trust">

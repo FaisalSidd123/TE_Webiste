@@ -1,9 +1,10 @@
-/* The section is half ink, half ivory; the skewed band sits across the seam. */
+/* Clean, horizontal luxury transition ribbon (pure light theme) */
 .locations {
   position: relative;
   z-index: 2;
-  padding-block: 40px;
-  background: linear-gradient(180deg, var(--ink) 50%, var(--ivory) 50%);
+  padding-block: 28px;
+  background: var(--sand);
+  border-block: 1px solid var(--line-light);
   overflow: hidden;
 }
 
@@ -11,13 +12,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 10px;
-  min-height: 120px;
-  margin-inline: -4vw;
-  padding-block: 18px;
-  background: var(--ink-2);
-  border-block: 1px solid rgba(212, 167, 58, 0.45);
-  transform: rotate(-2deg);
+  gap: 12px;
 }
 
 .loc-item {
@@ -26,10 +21,10 @@
 }
 
 .loc-star {
-  width: 0.38em;
-  height: 0.38em;
-  margin-inline: 0.7em;
-  fill: var(--gold-500);
+  width: 0.35em;
+  height: 0.35em;
+  margin-inline: 0.8em;
+  fill: var(--gold-700);
   flex: none;
 }
 
@@ -37,23 +32,24 @@
   font-family: var(--font-display);
   font-style: italic;
   font-weight: 500;
-  font-size: clamp(2.2rem, 4.4vw, 3.6rem);
-  line-height: 1.05;
-  color: transparent;
-  -webkit-text-stroke: 1px var(--gold-500);
+  font-size: clamp(1.8rem, 3.2vw, 2.5rem);
+  line-height: 1.1;
+  color: var(--text-dark);
+  letter-spacing: 0.01em;
 }
 
 .locations__row--solid .loc-item {
   font-family: var(--font-label);
-  font-weight: 400;
-  font-size: clamp(0.72rem, 0.9vw, 0.85rem);
-  letter-spacing: 0.32em;
+  font-weight: 500;
+  font-size: clamp(0.72rem, 0.82vw, 0.82rem);
+  letter-spacing: 0.28em;
   text-transform: uppercase;
-  color: var(--text-light);
+  color: var(--stone);
 }
 
 .locations__row--solid .loc-star {
-  width: 0.7em;
-  height: 0.7em;
-  margin-inline: 1.6em;
+  width: 0.6em;
+  height: 0.6em;
+  margin-inline: 1.4em;
+  fill: var(--gold-700);
 }

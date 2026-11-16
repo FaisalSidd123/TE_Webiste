@@ -113,7 +113,7 @@ export default function Navbar() {
     <>
       <header className={classes}>
         <div ref={innerRef} className="nav__inner container">
-          <LogoLockup tone="dark" href="/" onClick={goTo(null)} className="nav__logo" />
+          <LogoLockup tone="light" href="/" onClick={goTo(null)} className="nav__logo" />
 
           {isDesktop && (
             <nav className="nav__links" aria-label="Primary">

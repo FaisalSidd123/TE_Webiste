@@ -15,8 +15,8 @@ html {
 body {
   margin: 0;
   min-height: 100vh;
-  background: var(--ink);
-  color: var(--text-light);
+  background: var(--ivory);
+  color: var(--text-dark);
   font-family: var(--font-body);
   font-size: var(--fs-body);
   line-height: 1.7;
@@ -125,28 +125,36 @@ html.is-scroll-locked body {
   padding-block: var(--section-py);
 }
 
-.theme-ink {
-  background: var(--ink);
-  color: var(--text-light);
-  --line: var(--line-dark);
-  --muted: var(--stone);
-  --accent-text: var(--gold-500);
+.theme-white {
+  background: var(--white);
+  color: var(--text-dark);
+  --line: var(--line-light);
+  --muted: var(--text-muted);
+  --accent-text: var(--gold-700);
 }
 
 .theme-ivory {
   background: var(--ivory);
   color: var(--text-dark);
   --line: var(--line-light);
-  --muted: #6f685e; /* stone darkened for AA on ivory */
-  --accent-text: var(--gold-900);
+  --muted: var(--text-muted);
+  --accent-text: var(--gold-700);
 }
 
 .theme-sand {
   background: var(--sand);
   color: var(--text-dark);
   --line: var(--line-light);
-  --muted: #6a6359;
-  --accent-text: var(--gold-900);
+  --muted: var(--text-muted);
+  --accent-text: var(--gold-700);
+}
+
+.theme-ink {
+  background: var(--ink);
+  color: var(--text-light);
+  --line: var(--line-dark);
+  --muted: var(--text-light-muted);
+  --accent-text: var(--gold-300);
 }
 
 /* ==========================================================================
@@ -202,13 +210,14 @@ html.is-scroll-locked body {
 
 /* Gradient used for gold text; deeper on light themes for contrast */
 :root,
-.theme-ink {
-  --text-gold: var(--gold-gradient);
-}
-
+.theme-white,
 .theme-ivory,
 .theme-sand {
   --text-gold: var(--gold-gradient-deep);
+}
+
+.theme-ink {
+  --text-gold: var(--gold-gradient);
 }
 
 .text-gold,

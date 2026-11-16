@@ -1,0 +1,91 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  font-family: var(--font-label);
+  font-size: var(--fs-label);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s var(--ease-out);
+  border-radius: var(--radius);
+  white-space: nowrap;
+}
+
+.btn--gold {
+  background: var(--text-dark);
+  color: var(--white);
+  padding: 13px 26px;
+  border: 1px solid var(--text-dark);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.btn--gold:hover {
+  background: var(--gold-700);
+  border-color: var(--gold-700);
+  box-shadow: 0 6px 20px rgba(158, 116, 34, 0.25);
+  color: var(--white);
+}
+
+.theme-ink .btn--gold {
+  background: var(--gold-gradient);
+  color: var(--ink);
+  border: 1px solid transparent;
+}
+
+.theme-ink .btn--gold:hover {
+  filter: brightness(1.08);
+  box-shadow: 0 4px 24px rgba(223, 191, 109, 0.3);
+}
+
+.btn--outline {
+  background: transparent;
+  color: var(--text-dark);
+  border: 1px solid var(--line-light);
+  padding: 12px 24px;
+}
+
+.btn--outline:hover {
+  background: var(--text-dark);
+  color: var(--white);
+  border-color: var(--text-dark);
+}
+
+.theme-ink .btn--outline {
+  color: var(--gold-300);
+  border-color: var(--gold-500);
+}
+
+.theme-ink .btn--outline:hover {
+  background: rgba(223, 191, 109, 0.15);
+  color: var(--gold-100);
+  border-color: var(--gold-300);
+}
+
+.btn--text {
+  background: transparent;
+  color: var(--text-dark);
+  padding: 0;
+  border: 0;
+  position: relative;
+}
+
+.btn--text::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: var(--gold-700);
+  transform: scaleX(0.7);
+  transform-origin: left;
+  transition: transform 0.3s var(--ease-out);
+}
+
+.btn--text:hover::after {
+  transform: scaleX(1);
+}

@@ -1,0 +1,140 @@
+.about {
+  position: relative;
+  background: var(--ivory);
+  overflow: hidden;
+}
+
+.about__container {
+  position: relative;
+  z-index: 2;
+}
+
+.about__layout {
+  display: grid;
+  grid-template-columns: 5fr 7fr;
+  gap: clamp(2rem, 6vw, 6rem);
+}
+
+.about__left {
+  position: relative;
+}
+
+.about__sticky {
+  position: sticky;
+  top: 140px;
+  display: flex;
+  flex-direction: column;
+}
+
+.about__label {
+  margin-bottom: 2rem;
+}
+
+.about__urdu-box {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.about__urdu {
+  font-family: var(--font-urdu);
+  font-size: clamp(3.2rem, 5.5vw, 5.2rem);
+  line-height: 1.1;
+  color: var(--gold-700);
+  display: block;
+}
+
+.about__translit {
+  font-family: var(--font-label);
+  font-size: 0.95rem;
+  letter-spacing: 0.35em;
+  color: var(--text-dark);
+}
+
+.about__definition {
+  font-family: var(--font-display);
+  font-size: clamp(1.2rem, 1.8vw, 1.5rem);
+  font-style: italic;
+  color: var(--muted);
+  line-height: 1.4;
+  margin-top: 0.5rem;
+  max-width: 28ch;
+}
+
+.about__headline {
+  margin-bottom: 3.5rem;
+}
+
+.about__paragraphs {
+  display: flex;
+  flex-direction: column;
+  gap: 2.2rem;
+  margin-bottom: 5rem;
+}
+
+.about__scrub-text {
+  font-size: clamp(1.1rem, 1.35vw, 1.35rem);
+  line-height: 1.85;
+  color: var(--text-dark);
+  max-width: 58ch;
+}
+
+.about__pillars {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr auto 1fr;
+  align-items: start;
+  gap: clamp(1rem, 2vw, 2.5rem);
+  padding-top: 3rem;
+  border-top: 1px solid var(--line);
+}
+
+.about__pillar {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.about__pillar-icon {
+  color: var(--gold-700);
+}
+
+.about__pillar-title {
+  color: var(--gold-900);
+  font-size: 0.85rem;
+  letter-spacing: 0.22em;
+}
+
+.about__pillar-desc {
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+.about__pillar-divider {
+  width: 1px;
+  height: 100%;
+  min-height: 120px;
+  background: var(--line);
+}
+
+@media (max-width: 1024px) {
+  .about__layout {
+    grid-template-columns: 1fr;
+    gap: 3.5rem;
+  }
+
+  .about__sticky {
+    position: static;
+  }
+
+  .about__pillars {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .about__pillar-divider {
+    width: 100%;
+    height: 1px;
+    min-height: 1px;
+  }
+}

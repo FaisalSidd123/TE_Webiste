@@ -1,0 +1,97 @@
+.before-after {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  max-height: 580px;
+  overflow: hidden;
+  user-select: none;
+  cursor: ew-resize;
+  border: 1px solid var(--ink-3);
+  border-radius: var(--radius);
+  background: var(--ink-2);
+}
+
+.ba-layer {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.ba-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(0.85) contrast(1.05);
+}
+
+.ba-badge {
+  position: absolute;
+  top: 1.25rem;
+  font-family: var(--font-label);
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  background: rgba(14, 13, 11, 0.75);
+  backdrop-filter: blur(8px);
+  color: var(--text-light);
+  padding: 6px 12px;
+  border: 1px solid rgba(212, 167, 58, 0.3);
+  pointer-events: none;
+  z-index: 5;
+}
+
+.ba-badge--left {
+  left: 1.25rem;
+}
+
+.ba-badge--right {
+  right: 1.25rem;
+  color: var(--gold-300);
+}
+
+.ba-divider {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  transform: translateX(-50%);
+  pointer-events: none;
+  z-index: 10;
+}
+
+.ba-divider:focus-visible {
+  outline: 2px solid var(--gold-500);
+  outline-offset: 4px;
+}
+
+.ba-line {
+  position: absolute;
+  inset: 0;
+  background: var(--gold-500);
+  box-shadow: 0 0 12px rgba(212, 167, 58, 0.5);
+}
+
+.ba-handle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--ink);
+  border: 2px solid var(--gold-500);
+  color: var(--gold-500);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.6);
+  transition: transform 0.2s var(--ease-out), background-color 0.2s;
+}
+
+.before-after:hover .ba-handle {
+  transform: translate(-50%, -50%) scale(1.08);
+  background: var(--ink-2);
+}

@@ -1,0 +1,200 @@
+.footer {
+  position: relative;
+  background: var(--ink);
+  color: var(--text-light);
+  padding-top: clamp(80px, 12vh, 140px);
+  padding-bottom: 2.5rem;
+  overflow: hidden;
+  border-top: 1px solid var(--ink-3);
+}
+
+.footer__container {
+  position: relative;
+  z-index: 2;
+}
+
+.footer__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+  padding-bottom: 3.5rem;
+}
+
+.footer__ready {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 3.5vw, 3.2rem);
+  font-weight: 500;
+  color: var(--text-light);
+}
+
+.footer__divider {
+  margin-bottom: 4rem;
+}
+
+.footer__grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1.2fr 1.5fr;
+  gap: clamp(2rem, 4vw, 5rem);
+  padding-bottom: 5rem;
+}
+
+.footer__col--brand .footer__logo {
+  max-width: 180px;
+  height: auto;
+  margin-bottom: 1.5rem;
+}
+
+.footer__desc {
+  color: var(--stone);
+  font-size: 0.95rem;
+  line-height: 1.65;
+  max-width: 32ch;
+}
+
+.footer__heading {
+  color: var(--gold-500);
+  margin-bottom: 1.5rem;
+}
+
+.footer__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.footer__link {
+  color: var(--stone);
+  font-size: 0.95rem;
+  transition: color 0.3s;
+}
+
+.footer__link:hover {
+  color: var(--gold-300);
+}
+
+.footer__address {
+  font-style: normal;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  color: var(--stone);
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+}
+
+.footer__hours {
+  color: var(--text-light);
+  font-size: 0.85rem;
+  margin-top: 0.25rem;
+}
+
+.footer__socials {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.footer__soc-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border: 1px solid var(--ink-3);
+  border-radius: var(--radius);
+  color: var(--stone);
+  transition: all 0.3s;
+}
+
+.footer__soc-btn:hover {
+  color: var(--gold-500);
+  border-color: var(--gold-500);
+}
+
+/* Giant wordmark rising from ground line */
+.footer-wordmark-wrap {
+  position: relative;
+  margin-top: 2rem;
+  overflow: hidden;
+}
+
+.footer__bottom-line {
+  margin-bottom: 0;
+}
+
+.footer-wordmark {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  user-select: none;
+  pointer-events: none;
+  padding-top: 1rem;
+}
+
+.footer-wordmark__text {
+  font-family: var(--font-display);
+  font-size: clamp(4.5rem, 21vw, 22vw);
+  line-height: 0.82;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  text-align: center;
+  -webkit-text-stroke: 1px rgba(212, 167, 58, 0.3);
+  color: transparent;
+  background-image: linear-gradient(
+    90deg,
+    var(--gold-500) 0%,
+    var(--gold-300) var(--fill-progress, 0%),
+    transparent var(--fill-progress, 0%)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.footer-wordmark__mask {
+  display: inline-block;
+  overflow: hidden;
+}
+
+.footer-wordmark__letter {
+  display: inline-block;
+}
+
+.footer__bottom-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  padding-top: 2.5rem;
+  border-top: 1px solid var(--ink-3);
+  font-size: 0.85rem;
+  color: var(--stone);
+}
+
+.footer__bottom-links {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.footer__back-top {
+  color: var(--gold-500);
+}
+
+@media (max-width: 900px) {
+  .footer__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer__grid {
+    grid-template-columns: 1fr;
+  }
+}

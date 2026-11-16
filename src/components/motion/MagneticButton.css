@@ -4,18 +4,18 @@
   align-items: center;
   justify-content: center;
   gap: 0.75em;
-  min-height: 54px;
-  padding: 0 30px;
+  min-height: 50px;
+  padding: 0 28px;
   overflow: hidden;
   isolation: isolate;
   border-radius: var(--radius);
   font-family: var(--font-label);
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   font-weight: 500;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
   white-space: nowrap;
-  transition: color 0.5s var(--ease-out), border-color 0.5s var(--ease-out);
+  transition: color 0.4s var(--ease-out), border-color 0.4s var(--ease-out), box-shadow 0.4s var(--ease-out);
 }
 
 .mbtn__label {
@@ -32,7 +32,7 @@
   z-index: 0;
   transform: scaleX(0);
   transform-origin: right center;
-  transition: transform 0.7s var(--ease-expo);
+  transition: transform 0.6s var(--ease-expo);
 }
 
 .mbtn:hover .mbtn__fill,
@@ -41,48 +41,60 @@
   transform-origin: left center;
 }
 
-/* Solid: gold gradient, ivory wipe */
+/* Solid: Sleek luxury dark button on light backgrounds, or refined gold */
 .mbtn--solid {
-  background: var(--gold-gradient);
-  color: var(--ink);
+  background: var(--text-dark);
+  color: var(--white);
+  border: 1px solid var(--text-dark);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
 }
 
 .mbtn--solid .mbtn__fill {
-  background: var(--ivory);
+  background: var(--gold-700);
 }
 
-/* Outline: gold hairline, gold wipe, ink text on hover */
+.mbtn--solid:hover {
+  border-color: var(--gold-700);
+  box-shadow: 0 6px 20px rgba(158, 116, 34, 0.25);
+}
+
+/* Outline button */
 .mbtn--outline {
-  border: 1px solid var(--gold-500);
-  color: var(--gold-300);
+  background: transparent;
+  border: 1px solid var(--line-light);
+  color: var(--text-dark);
 }
 
 .mbtn--outline .mbtn__fill {
-  background: var(--gold-gradient);
+  background: var(--text-dark);
 }
 
 .mbtn--outline:hover,
 .mbtn--outline:focus-visible {
+  color: var(--white);
+  border-color: var(--text-dark);
+}
+
+/* In dark sections (Final CTA, Footer) */
+.theme-ink .mbtn--solid {
+  background: var(--gold-gradient);
   color: var(--ink);
+  border-color: transparent;
 }
 
-.theme-ivory .mbtn--outline,
-.theme-sand .mbtn--outline {
-  border-color: var(--gold-700);
-  color: var(--gold-900);
+.theme-ink .mbtn--solid .mbtn__fill {
+  background: var(--white);
 }
 
-.theme-ivory .mbtn--outline:hover,
-.theme-sand .mbtn--outline:hover {
+.theme-ink .mbtn--outline {
+  border-color: var(--gold-500);
+  color: var(--gold-300);
+}
+
+.theme-ink .mbtn--outline .mbtn__fill {
+  background: var(--gold-gradient);
+}
+
+.theme-ink .mbtn--outline:hover {
   color: var(--ink);
-}
-
-.theme-ivory .mbtn--solid .mbtn__fill,
-.theme-sand .mbtn--solid .mbtn__fill {
-  background: var(--ink);
-}
-
-.theme-ivory .mbtn--solid:hover,
-.theme-sand .mbtn--solid:hover {
-  color: var(--ivory);
 }
