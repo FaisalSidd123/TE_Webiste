@@ -13,23 +13,24 @@ function Star() {
 
 const renderArea = (area, key) => (
   <span key={key} className="loc-item">
-    {area.name}
+    <span className="loc-name">{area.name}</span>
     <Star />
   </span>
 );
 
-/*
-  Skewed band bridging the dark hero and the ivory About section.
-  Row 1: outlined Cormorant italic, leftward. Row 2: solid Oswald, rightward.
-  Purely decorative (aria-hidden); the same list is announced once for screen readers.
-*/
 export default function LocationsMarquee() {
   return (
-    <section className="locations" aria-label="Areas we cover">
-      <p className="sr-only">We work across Karachi: {AREAS.map((a) => a.name).join(', ')}.</p>
+    <section className="locations" aria-label="Premier locations across Karachi">
+      <p className="sr-only">We advise across Karachi: {AREAS.map((a) => a.name).join(', ')}.</p>
       <div className="locations__band" data-marquee-group>
-        <Marquee items={AREAS} renderItem={renderArea} speed={38} direction={1} className="locations__row locations__row--outline" />
-        <Marquee items={AREAS} renderItem={renderArea} copies={3} speed={30} direction={-1} className="locations__row locations__row--solid" />
+        <Marquee
+          items={AREAS}
+          renderItem={renderArea}
+          copies={3}
+          speed={24}
+          direction={1}
+          className="locations__row"
+        />
       </div>
     </section>
   );

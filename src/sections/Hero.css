@@ -25,7 +25,8 @@
   grid-template-columns: repeat(12, minmax(0, 1fr));
   column-gap: clamp(24px, 4vw, 48px);
   align-items: center;
-  padding-block: clamp(36px, 6vh, 64px);
+  padding-top: clamp(24px, 4vh, 48px);
+  padding-bottom: clamp(16px, 2.5vh, 32px);
   position: relative;
   z-index: 1;
 }
@@ -114,24 +115,24 @@
   justify-self: end;
   position: relative;
   width: 100%;
-  max-width: 480px;
+  max-width: clamp(300px, 30vw, 420px);
 }
 
 .hero__img {
-  aspect-ratio: 4 / 5;
-  border-radius: var(--radius-xl);
+  aspect-ratio: 4 / 4.4;
+  border-radius: var(--radius-lg);
   overflow: hidden;
-  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
 }
 
 /* Gold drawing frame, behind and offset */
 .hero__frame {
   position: absolute;
   inset: 0;
-  border-radius: var(--radius-xl);
+  border-radius: var(--radius-lg);
   border: 1px solid var(--gold-500);
-  opacity: 0.45;
-  transform: translate(16px, 16px);
+  opacity: 0.4;
+  transform: translate(12px, 12px);
   pointer-events: none;
 }
 
@@ -139,7 +140,8 @@
 .hero__ground {
   position: relative;
   z-index: 1;
-  padding-bottom: clamp(16px, 2.5vh, 24px);
+  margin-top: auto;
+  padding-bottom: clamp(20px, 3vh, 32px);
 }
 
 .hero__ground-labels {
