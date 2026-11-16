@@ -52,34 +52,52 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.12;
+  opacity: 0.72;
   transition: opacity 0.8s var(--ease-out), transform 1.2s var(--ease-out);
-  filter: saturate(0.85) contrast(1.05);
+  filter: saturate(1.05) contrast(1.05);
 }
 
 .division.is-expanded .division__bg-img {
-  opacity: 0.22;
+  opacity: 0.9;
   transform: scale(1.04);
 }
 
 .division.is-shrunk .division__bg-img {
-  opacity: 0.06;
+  opacity: 0.45;
 }
 
 .division__overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(250, 248, 245, 0.7) 0%, rgba(250, 248, 245, 0.96) 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(250, 248, 245, 0.4) 0%,
+    rgba(250, 248, 245, 0.65) 60%,
+    rgba(250, 248, 245, 0.88) 100%
+  );
+  transition: opacity 0.5s var(--ease-out);
 }
 
 .division--construct .division__overlay {
-  background: linear-gradient(180deg, rgba(243, 239, 230, 0.7) 0%, rgba(243, 239, 230, 0.96) 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(243, 239, 230, 0.4) 0%,
+    rgba(243, 239, 230, 0.65) 60%,
+    rgba(243, 239, 230, 0.88) 100%
+  );
 }
 
 .division__inner {
   position: relative;
   z-index: 2;
-  max-width: 500px;
+  max-width: 520px;
+  background: rgba(255, 255, 255, 0.88);
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  border-radius: var(--radius-xl);
+  padding: clamp(28px, 4vw, 44px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.06);
 }
 
 .division__label {

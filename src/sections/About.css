@@ -15,7 +15,9 @@
 .about__layout {
   display: grid;
   grid-template-columns: 5fr 7fr;
-  gap: clamp(2rem, 6vw, 6rem);
+  gap: clamp(2rem, 5vw, 5.5rem);
+  align-items: start;
+  margin-bottom: clamp(44px, 6vh, 68px);
 }
 
 .about__left {
@@ -24,7 +26,7 @@
 
 .about__sticky {
   position: sticky;
-  top: 140px;
+  top: 120px;
   display: flex;
   flex-direction: column;
 }
@@ -65,15 +67,82 @@
   max-width: 28ch;
 }
 
+/* Fiduciary Commitment card balancing the left column */
+.about__credo {
+  margin-top: clamp(24px, 3.5vh, 36px);
+  padding: 24px;
+  background: var(--white);
+  border: 1px solid var(--line-light);
+  border-radius: var(--radius-xl);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.03);
+}
+
+.about__credo-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.about__credo-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: rgba(195, 151, 56, 0.12);
+  color: var(--gold-700);
+}
+
+.about__credo-tag {
+  font-family: var(--font-label);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  color: var(--gold-900);
+}
+
+.about__credo-title {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  line-height: 1.25;
+  margin-bottom: 8px;
+}
+
+.about__credo-text {
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+  margin-bottom: 14px;
+}
+
+.about__credo-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+  padding-top: 12px;
+  border-top: 1px solid var(--line-light);
+}
+
+.about__credo-badge {
+  font-family: var(--font-label);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: var(--gold-900);
+}
+
 .about__headline {
-  margin-bottom: 3rem;
+  margin-bottom: 2.5rem;
 }
 
 .about__paragraphs {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-  margin-bottom: 4rem;
+  gap: 1.8rem;
 }
 
 .about__scrub-text {
@@ -86,8 +155,8 @@
 .about__pillars {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  padding-top: 1rem;
+  gap: clamp(16px, 2.5vw, 28px);
+  width: 100%;
 }
 
 .about__pillar {

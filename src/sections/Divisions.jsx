@@ -80,8 +80,8 @@ export default function Divisions() {
         >
           <div className="division__bg">
             <img
-              src={IMAGES.consultApartment.src}
-              srcSet={IMAGES.consultApartment.srcSet}
+              src={IMAGES.villaPool.src}
+              srcSet={IMAGES.villaPool.srcSet}
               alt="Luxury residential property"
               className="division__bg-img"
               loading="lazy"
@@ -140,9 +140,9 @@ export default function Divisions() {
         >
           <div className="division__bg">
             <img
-              src={IMAGES.srvInvest.src}
-              srcSet={IMAGES.srvInvest.srcSet}
-              alt="Commercial real estate skyline"
+              src={IMAGES.commercialTower.src}
+              srcSet={IMAGES.commercialTower.srcSet}
+              alt="Commercial real estate glass tower"
               className="division__bg-img"
               loading="lazy"
             />

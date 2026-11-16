@@ -98,7 +98,7 @@ export default function About() {
 
       <div className="container about__container">
         <div className="about__layout">
-          {/* Left Column: Sticky Urdu & Meaning */}
+          {/* Left Column: Urdu philosophy and Fiduciary Pledge Card */}
           <div className="about__left">
             <div className="about__sticky">
               <SectionLabel label="01 / ABOUT" className="about__label" />
@@ -112,10 +112,28 @@ export default function About() {
                   Mindfulness. Integrity. Accountability in every action.
                 </p>
               </div>
+
+              {/* Fiduciary Commitment Card to balance layout and eliminate empty space */}
+              <div className="about__credo card-curved">
+                <div className="about__credo-header">
+                  <div className="about__credo-icon">
+                    <Icon name="shield" size={20} />
+                  </div>
+                  <span className="about__credo-tag t-label">FIDUCIARY COMMITMENT</span>
+                </div>
+                <h4 className="about__credo-title">Uncompromising Title Integrity</h4>
+                <p className="about__credo-text">
+                  We never take dual commissions on disputed files. Every plot, residence, and commercial asset under our counsel undergoes multi-authority legal vetting before you commit a single rupee.
+                </p>
+                <div className="about__credo-badges">
+                  <span className="about__credo-badge">✦ DHA & Clifton Verified</span>
+                  <span className="about__credo-badge">✦ Clear Sub-Registrar Records</span>
+                </div>
+              </div>
             </div>
           </div>
 
-          {/* Right Column: Narrative & 3 Pillars */}
+          {/* Right Column: Narrative */}
           <div className="about__right">
             <h2 id="about-title" className="about__headline t-h2">
               The principle behind <em className="t-accent text-gold">every decision</em>.
@@ -135,39 +153,39 @@ export default function About() {
                 portfolio, you deserve an advisor who is genuinely on your side. That is what <em>Results You Deserve</em> means to us.
               </p>
             </div>
+          </div>
+        </div>
 
-            {/* 3 Pillars */}
-            <div className="about__pillars">
-              <div className="about__pillar">
-                <div className="about__pillar-icon">
-                  <Icon name="handshake" size={24} />
-                </div>
-                <h3 className="about__pillar-title t-label">Honest Counsel</h3>
-                <p className="about__pillar-desc">
-                  Objective market realities, clear yield forecasts, and advice to walk away if an investment isn’t sound.
-                </p>
-              </div>
-
-              <div className="about__pillar">
-                <div className="about__pillar-icon">
-                  <Icon name="document" size={24} />
-                </div>
-                <h3 className="about__pillar-title t-label">Clear Documentation</h3>
-                <p className="about__pillar-desc">
-                  Exhaustive legal vetting across all Karachi civic authorities before you commit a single rupee.
-                </p>
-              </div>
-
-              <div className="about__pillar">
-                <div className="about__pillar-icon">
-                  <Icon name="chart" size={24} />
-                </div>
-                <h3 className="about__pillar-title t-label">Strategic Advisory</h3>
-                <p className="about__pillar-desc">
-                  Data-driven valuation, high-growth corridor analysis, and disciplined asset security for long-term prosperity.
-                </p>
-              </div>
+        {/* 3 Pillars — Full Width Grid across the bottom */}
+        <div className="about__pillars">
+          <div className="about__pillar">
+            <div className="about__pillar-icon">
+              <Icon name="handshake" size={24} />
             </div>
+            <h3 className="about__pillar-title t-label">Honest Counsel</h3>
+            <p className="about__pillar-desc">
+              Objective market realities, clear yield forecasts, and advice to walk away if an investment isn’t sound.
+            </p>
+          </div>
+
+          <div className="about__pillar">
+            <div className="about__pillar-icon">
+              <Icon name="document" size={24} />
+            </div>
+            <h3 className="about__pillar-title t-label">Clear Documentation</h3>
+            <p className="about__pillar-desc">
+              Exhaustive legal vetting across all Karachi civic authorities before you commit a single rupee.
+            </p>
+          </div>
+
+          <div className="about__pillar">
+            <div className="about__pillar-icon">
+              <Icon name="chart" size={24} />
+            </div>
+            <h3 className="about__pillar-title t-label">Strategic Advisory</h3>
+            <p className="about__pillar-desc">
+              Data-driven valuation, high-growth corridor analysis, and disciplined asset security for long-term prosperity.
+            </p>
           </div>
         </div>
       </div>
