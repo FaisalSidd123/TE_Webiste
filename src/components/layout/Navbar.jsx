@@ -136,14 +136,9 @@ export default function Navbar() {
 
           <div className="nav__end">
             {isDesktop ? (
-              <>
-                <a className="nav__phone" href={CONTACT.phoneHref}>
-                  {CONTACT.phoneDisplay}
-                </a>
-                <MagneticButton href="#contact" variant="outline" className="nav__cta" onClick={goTo('contact')}>
-                  Book a Consultation
-                </MagneticButton>
-              </>
+              <MagneticButton href="#contact" variant="outline" className="nav__cta" onClick={goTo('contact')}>
+                Book a Consultation
+              </MagneticButton>
             ) : (
               <button
                 ref={toggleRef}
